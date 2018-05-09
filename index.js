@@ -25,12 +25,12 @@ CuckooClock = {
 
 		const {CronJob} = require('cron');
 
-		new CronJob('* 0 7-24 * * *', () => {
+		new CronJob('0 0 7-24 * * *', () => {
 			var d = new Date();
-			var h = d.getHours();
+			var h = d.getHours() % 12;
 			var sound = sounds[h];
 			googlehome.play(sound, function(res) {
-			  console.log(res);
+			  console.log("CuckooClock [" + sound + "]", res);
 			});
 		}, null, true);
 	}

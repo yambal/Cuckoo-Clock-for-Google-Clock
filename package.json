@@ -1,6 +1,6 @@
 {
   "name": "cuckooclock",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Cuckoo Clock for Google Home",
   "main": "index.js",
   "dependencies": {
