@@ -1,5 +1,4 @@
 var googlehome = require('google-home-notifier');
-var cron = require('node-cron');
 
 var sounds = [
 	'https://yambal.github.io/static-mtral/cuckoo_12.mp3',
@@ -24,14 +23,16 @@ CuckooClock = {
 		googlehome.device("Google-Home", 'ja');
 		googlehome.ip(ip);
 
-		cron.schedule('0 * * * *', function(){
+		const {CronJob} = require('cron');
+
+		new CronJob('* 0 7-24 * * *', () => {
 			var d = new Date();
 			var h = d.getHours();
 			var sound = sounds[h];
 			googlehome.play(sound, function(res) {
 			  console.log(res);
 			});
-		});
+		}, null, true);
 	}
 }
 
