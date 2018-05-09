@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/yambal/Cuckoo-Clock-for-Google-Clock/issues"
   },
-  "homepage": "https://github.com/yambal/Cuckoo-Clock-for-Google-Clock#readme"
+  "homepage": "https://github.com/yambal/Cuckoo-Clock-for-Google-Clock#readme",
+  "keywords": [
+    "Google Home"
+  ]
 }
